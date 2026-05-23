@@ -14,7 +14,7 @@ export function showPage(request: Request, env: Env): Response {
     const protocolConfig = getProtocolConfig();
     const defaultBackend = getDefaultBackend(request, env);
 
-    const hasDBConfig = env.DB !== undefined;
+    const hasDBConfig = env.SHORT_URL_ENABLED === true;
 
     const html = `  
     <!DOCTYPE html>
